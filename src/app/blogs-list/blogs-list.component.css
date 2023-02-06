@@ -1,0 +1,9 @@
+.icon-remove{
+    font-size: 2rem;
+    position: absolute;
+    z-index: 1;
+    left: 96%;
+    top: -0.3em;
+    background-color: white;
+    border-radius: 50%;
+}

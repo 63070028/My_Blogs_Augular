@@ -1,0 +1,28 @@
+<div class="section">
+  <div class="columns is-multiline">
+    <div class="column is-one-quarter" *ngFor="let blog of blogsList; let i = index;">
+      <div class="card">
+        <i class="pi pi-times-circle icon-remove" (click)="blogRemove(i)"></i>
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img [src]="blog.image" alt="Placeholder image" />
+            </figure>
+            <div class="card-content">
+              <p class="title is-4">{{ blog.title }}</p>
+              <div class="content">
+                <p class="has-text-grey-light mt-3 mb-3">
+                  Date Time: {{ blog.date }}
+                </p>
+                <p class="has-text-grey-light">
+                  {{ blog.detail }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

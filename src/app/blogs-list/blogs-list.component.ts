@@ -7,11 +7,12 @@ import { Blog } from '../model/blog';
 })
 export class BlogsListComponent {
    @Input() blogsList:Blog[] = [];
-  //  @Output() eventBlogRemove = new EventEmitter();
+   @Output() eventBlogRemove = new EventEmitter();
 
 
    blogRemove(index:number){
     console.log(index);
     this.blogsList.splice(index,1);
+    this.eventBlogRemove.emit(index);
    }
 }

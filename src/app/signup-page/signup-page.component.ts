@@ -55,13 +55,13 @@ export class SignupPageComponent {
 
     console.log(data)
 
-  //   this.http.post('http://localhost:3000/signup', data, {
-  //     headers: { "Access-Control-Allow-Origin": "*" }
-  // }).subscribe(
-  //     (res) => {
-  //       console.log(res); 
-  //     }
-  //   );
+    this.http.post('http://localhost:3000/signup', data, {
+      headers: { "Access-Control-Allow-Origin": "*" }
+  }).subscribe(
+      (res) => {
+        console.log(res); 
+      }
+    );
   }
 
 

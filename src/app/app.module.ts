@@ -8,6 +8,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { SignupPageComponent } from './signup-page/signup-page.component';
 import {ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { BlogPageComponent } from './blog-page/blog-page.component';
 
  
 
@@ -16,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     BlogsListComponent,
     HomePageComponent,
-    SignupPageComponent
+    SignupPageComponent,
+    BlogPageComponent
   ],
   imports: [
     BrowserModule,

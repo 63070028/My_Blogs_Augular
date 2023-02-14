@@ -18,7 +18,7 @@ import { BlogPageComponent } from './blog-page/blog-page.component';
     BlogsListComponent,
     HomePageComponent,
     SignupPageComponent,
-    BlogPageComponent
+    BlogPageComponent,
   ],
   imports: [
     BrowserModule,

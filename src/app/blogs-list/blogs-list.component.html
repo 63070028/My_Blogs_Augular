@@ -1,6 +1,6 @@
 <div class="section">
   <div class="columns is-multiline">
-    <div class="column is-one-quarter" *ngFor="let blog of blogsList; let i = index;">
+    <div [ngClass]="columnClass" *ngFor="let blog of addBlogsPageList; let i = index;">
       <div class="card">
         <i class="pi pi-times-circle icon-remove" (click)="blogRemove(i)"></i>
         <div class="card">
@@ -25,4 +25,33 @@
     </div>
   </div>
 </div>
+
+
+<nav class="pagination is-medium p-6" role="navigation" aria-label="pagination">
+  <button
+    class="pagination-previous"
+    [disabled]="previousClicked"
+    (click)="getPreviousPage()"
+  >
+    Previous
+  </button>
+  <button
+    class="pagination-next"
+    [disabled]="nextPageClicked"
+    (click)="getNextPage()"
+  >
+    Next page
+  </button>
+  <ul class="pagination-list">
+    <li>
+      <a
+        id="{{ 'pageId' + (page + 1) }}"
+        class="pagination-link"
+        *ngFor="let page of countOfPages; let i = index"
+        (click)="changePage(page + 1)"
+        >{{ page + 1 }}</a
+      >
+    </li>
+  </ul>
+</nav>
 
